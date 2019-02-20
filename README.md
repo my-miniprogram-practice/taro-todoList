@@ -7,5 +7,8 @@
 npm install
 
 # 运行
+# 小程序
 npm run dev:weapp # 打包后的dist目录添加小程序开发工具
+# H5
+npm run dev:h5
 ```
