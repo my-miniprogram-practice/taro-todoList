@@ -1,7 +1,7 @@
 import Taro, { Component } from '@tarojs/taro';
 import { Provider } from '@tarojs/redux';
 import Index from './pages/index';
-import configureStore from './store';
+import configureStore from './redux/store';
 
 import './app.scss';
 

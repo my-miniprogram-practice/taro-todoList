@@ -1,7 +1,7 @@
 import Taro, { Component } from '@tarojs/taro';
 import { View, Text, Input } from '@tarojs/components';
 import { connect } from '@tarojs/redux';
-import { add, del } from '../../actions';
+import { actions as todoActions } from '../../redux/modules/todos';
 
 import './index.scss';
 
@@ -86,17 +86,17 @@ class Index extends Component {
 
 function mapStateToProps({ todos }) {
   return {
-    todos: todos.todos
+    todos
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     addTodo(data) {
-      dispatch(add(data));
+      dispatch(todoActions.add(data));
     },
     delTodo(id) {
-      dispatch(del(id));
+      dispatch(todoActions.del(id));
     }
   };
 }
